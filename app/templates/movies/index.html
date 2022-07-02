@@ -2,7 +2,11 @@
 
 {% block main %}
 
-<h1> Test 2 </h1>
+{% for movie in movies %}
+<h3> movie: {{movie}} </h3>
+<img src="media/{{movie.image}}" alt="Oops!">
+<a href="movie/{{movie.kinopoisk_id}}">Ссылка</a>
+{% endfor %}
 
 {% endblock %}
  
