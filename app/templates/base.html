@@ -14,32 +14,36 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
 </head>
-<body class="row align-items-center">
-   <header>
-        <div class="container-up">
-            <a class="start" href="https://www.google.com/webhp?hl=ru&sa=X&ved=0ahUKEwiz4_7jkt_4AhViwIsKHRFSBFwQPAgI">Голубой Огонёк</a>
-            <div class="nav">
-                <a class="start1" href="https://www.google.com/webhp?hl=ru&sa=X&ved=0ahUKEwiz4_7jkt_4AhViwIsKHRFSBFwQPAgI"><div class="mainly">Основы игры</div></a>
-                <a class="start1" href="https://www.google.com/webhp?hl=ru&sa=X&ved=0ahUKEwiz4_7jkt_4AhViwIsKHRFSBFwQPAgI"><div class="mainly">Сюжет</div></a>
-                <a class="start1" href="https://www.google.com/webhp?hl=ru&sa=X&ved=0ahUKEwiz4_7jkt_4AhViwIsKHRFSBFwQPAgI"><div class="mainly">Большие острова</div></a>
-                <a class="start1" href="https://www.google.com/webhp?hl=ru&sa=X&ved=0ahUKEwiz4_7jkt_4AhViwIsKHRFSBFwQPAgI"><div class="mainly">Животные</div></a>
-                <a class="start1" href="https://www.google.com/webhp?hl=ru&sa=X&ved=0ahUKEwiz4_7jkt_4AhViwIsKHRFSBFwQPAgI"><div class="mainly">Советы</div></a>
-                <a class="start1" href="https://www.google.com/webhp?hl=ru&sa=X&ved=0ahUKEwiz4_7jkt_4AhViwIsKHRFSBFwQPAgI"><div class="mainly">Комментарии</div></a>
-            </div>
-        </div>
-   </header>
-   <div class="row">
-      <div class="col-1"></div>
-      <div class="col-10">
-
-          {% block main %}
-          {% endblock %}
-
-      </div>
-      <p></p>
-      <div class="col-1"></div>
+<body>
+   <div class="header">
+     <div class="container">
+         <a class="start" href="/">Голубой Огонёк</a>
+         <div class="nav">
+            <form action="/search/" method="post">
+             <div>
+                 <!-- <label for="say">Поиск</label> -->
+                 <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+             </div>
+             <div>
+                 <input type="submit" value="OK">
+             </div>
+            </form>
+            <a class="start1" href="/"><div class="mainly">Лушие фильмы</div></a>
+            <a class="start1" href="/"><div class="mainly">Самые популярные за неделю</div></a>
+            <a class="start1" href="/"><div class="mainly">Вход</div></a>
+         </div>
+     </div>
    </div>
+   <div class="main">
+      <div class="start_main">
+         <div class="movies">
 
+             {% block main %}
+             {% endblock %}
 
+         </div>
+      </div>
+      <div class="temp"></div>
+   </div>
 </body>
 </html>
