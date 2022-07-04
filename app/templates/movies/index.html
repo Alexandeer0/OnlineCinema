@@ -3,9 +3,12 @@
 {% block main %}
 
 {% for movie in movies %}
-<h3> movie: {{movie}} </h3>
-<img src="media/{{movie.image}}" alt="Oops!">
-<a href="movie/{{movie.kinopoisk_id}}">Ссылка</a>
+<div class="one_movie">
+	<a href="movie/{{movie.kinopoisk_id}}"><img src="media/{{movie.image}}" alt="Oops!"></a>
+	<div class="connected_movie">
+		<p> {{movie}} </p>
+	</div>
+</div>
 {% endfor %}
 
 {% endblock %}
