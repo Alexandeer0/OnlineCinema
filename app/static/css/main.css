@@ -9,6 +9,41 @@ body {
     background-color: #19171c;
     height: auto;
 }
+
+header{
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+}
+.container_up{
+    background-color: rgba(0,58,115,1);
+    margin: auto;
+    width: 100% ;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+}
+.nav{
+    display: flex;
+    margin-right: 10px;
+}
+.mainly{
+    display: flex;
+    align-items: center;
+    padding-top: 23px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: rgb(200,200,200);
+    font-size: 13px;
+    transition: all .3s;
+}
+.mainly:hover{
+    font-size: 18px;
+    padding-top: 20px;
+}
+
 .row {
     background-color: #19171c;
 }
