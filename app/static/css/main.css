@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -11,6 +12,7 @@ html{
 
 body {
     background-color: #19171c;
+    /* min-height: 100%; */
     margin:0;
     top:0;
     bottom:0;
@@ -18,6 +20,9 @@ body {
 
 .header {
     background-color: #4b367c;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 
 .header .container {
@@ -55,7 +60,6 @@ body {
     font-size: 25px;
     color: rgb(200,200,200);
     padding: 15px;
-    margin-left: 50px;
     transition: .3s;
 }
 .start:hover {
@@ -75,7 +79,7 @@ form button {
     color: #000;
 }
 .main {
-    padding-top: 40px;
+/*     padding-top: 40px; */
     display: block;
     height: 100%;
     background-color: #19171c;
@@ -92,7 +96,8 @@ form button {
 }
 .one_movie{
     padding: 30px;
-    transition: .8s;
+    transition: .5s;
+    align-self: stretch;
 }
 .connected_movie{
     color: rgb(240,240,240);
@@ -100,10 +105,9 @@ form button {
     padding: 10px;
     text-align: center;
     width: 300px;
-    height: 60px;
 }
 .one_movie:hover {
-    transform: scale(1.17);
+    transform: scale(1.1);
 }
 .temp{
     height: 300px;

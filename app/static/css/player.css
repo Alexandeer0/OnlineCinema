@@ -7,9 +7,7 @@
 body {
     background-color: #19171c;
     /* min-height: 100%; */
-    margin:0;
-    top:0;
-    bottom:0;
+
 }
 
 .header {
@@ -43,7 +41,7 @@ body {
 }
 
 form {
-    color:aliceblue;
+    color:#19171c;
     display: flex;
     align-items: center;
 }
@@ -52,8 +50,9 @@ form button {
 }
 .content {
     background-color: #211f25;
-    height: 95vh;
+    min-height: 100vh;
     padding: 20px;
+    padding-top: 80px;
 }
 
 .player {
