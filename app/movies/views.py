@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Movie
+from .forms import MovieForm
 
 
 def index_page(request):
@@ -9,3 +10,26 @@ def index_page(request):
 
 def player_page(request, kinopoisk_id):
     return render(request, 'movies/player.html', {'kinopoisk_id': kinopoisk_id})
+
+
+
+
+def search(request):
+    #submitbutton = request.POST.get("submit")
+    form = MovieForm(request.POST)
+    moviename=""
+    if form.is_valid():
+        moviename = form.cleaned_data.get("moviename")
+
+    moviename=moviename.lower().replace('%20',' ').replace('-',' ')
+    movies = Movie.objects.all()
+    for mv in movies:
+        mv.lowername=mv.name.lower().replace('-',' ')
+        mv.save()
+    movies2=Movie.objects.filter(lowername__icontains=moviename)
+    if movies2.exists():
+        return render(request, 'movies/index.html', {'movies': movies2})
+    else:
+        return render(request, 'movies/index.html', {'movies': movies})
+
+
