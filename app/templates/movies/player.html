@@ -1,37 +1,19 @@
 {% extends 'base.html' %}
-<!--  
-<body>
-    <div class="header">
-        <div class="container">
-            <a href="/" class="logo">
-                <span>Голубой огонек</span>
-            </a>
-            <form action="/search/" method="post">
-                <div>
-                    <label for="say">Поиск</label>
-                    <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
-                </div>
-                <div>
-                    <input type="submit" value="OK">
-                </div>
-            </form>
-        </div>
-    </div> -->
+
 
 {% block main %}
 
-    <div class="container">
-        <div class="content">
-            <h2 class="movie-name">Movie</h2>
-            <div id="kinoplayertop" data-classname="player" data-player="bazon" data-kinopoisk="{{ kinopoisk_id }}"></div>
-            <script src="//kinoplayer.top/top.js"></script>
-            
-            <div class="description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quos, debitis, culpa reprehenderit doloribus recusandae accusantium nesciunt numquam molestiae labore placeat voluptatum! Impedit quo, laboriosam debitis temporibus iste, ipsa voluptatem saepe, at consectetur porro et molestias. Numquam ea laborum iure inventore. Nemo dolor accusamus necessitatibus dicta, sapiente aliquid. Reprehenderit, dolores. ipsum dolor sit amet consectetur adipisicing elit. Voluptas totam aspernatur fugit odit nisi corrupti? Cum maxime alias dolores consequuntur!</p>
-            </div>
+    <div class="player-content">
+        <h2 class="movie-name">Movie</h2>
+        <div class="video-wrapper">
+            <video controls poster="/app/static/images/filmklappe-t.jpg"></video>
+        </div>
+        <div class="description">
+            <span>Описание</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quos, debitis, culpa reprehenderit doloribus recusandae accusantium nesciunt numquam molestiae labore placeat voluptatum! Impedit quo, laboriosam debitis temporibus iste, ipsa voluptatem saepe, at consectetur porro et molestias. Numquam ea laborum iure inventore. Nemo dolor accusamus necessitatibus dicta, sapiente aliquid. Reprehenderit, dolores. ipsum dolor sit amet consectetur adipisicing elit. Voluptas totam aspernatur fugit odit nisi corrupti? Cum maxime alias dolores consequuntur!</p>
         </div>
     </div>
-
+    
 {% endblock %}
  
 

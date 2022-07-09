@@ -2,23 +2,66 @@
 
 {% block main %}
 
-<!-- <div class="main"> -->
-<div class="content">
-	<div class="start_main">
-	   <div class="movies">
+	<div class="movies">
+		
+		{% for movie in movies %}
+		
+		<div class="card-wrapper">
+			<a href="/movie/{{movie.kinopoisk_id}}">
+				<div class="one_movie">
+					<img src="media/{{movie.image}}" alt="Oops!">
+					<div class="connected_movie">
+						<div class="movie-title-wrapper">
+							<div class="movie-title">{{movie}}</div>
+						</div>
+						<!-- <div class="description-wrapper">
+							<div class="mini-description">{{movie.description}}</div>
+						</div> -->
+					</div>
+				</div>
+			</a>
+		</div>
+		{% endfor %}
+		{% for movie in movies %}
+		
+		<div class="card-wrapper">
+			<a href="/movie/{{movie.kinopoisk_id}}">
+				<div class="one_movie">
+					<img src="media/{{movie.image}}" alt="Oops!">
+					<div class="connected_movie">
+						<div class="movie-title-wrapper">
+							<div class="movie-title">{{movie}}</div>
+						</div>
+						<!-- <div class="description-wrapper">
+							<div class="mini-description">{{movie.description}}</div>
+						</div> -->
+					</div>
+				</div>
+			</a>
+		</div>
+		{% endfor %}
+		{% for movie in movies %}
+		
+		<div class="card-wrapper">
+			<a href="/movie/{{movie.kinopoisk_id}}">
+				<div class="one_movie">
+					<img src="media/{{movie.image}}" alt="Oops!">
+					<div class="connected_movie">
+						<div class="movie-title-wrapper">
+							<div class="movie-title">{{movie}}</div>
+						</div>
+						<!-- <div class="description-wrapper">
+							<div class="mini-description">{{movie.description}}</div>
+						</div> -->
+					</div>
+				</div>
+			</a>
+		</div>
+		{% endfor %}
+		
 
-		   {% for movie in movies %}
-		   <div class="one_movie">
-			   <a href="/movie/{{movie.kinopoisk_id}}"><img src="media/{{movie.image}}" alt="Oops!"></a>
-			   <div class="connected_movie">
-				   <div> {{movie}} </div>
-			   </div>
-		   </div>
-		   {% endfor %}
-
-	   </div>
 	</div>
- </div>
+
 
 
 {% endblock %}
