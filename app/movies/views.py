@@ -9,8 +9,9 @@ def index_page(request):
 
 
 def player_page(request, kinopoisk_id):
-    movie = Movie.objects.filter(kinopoisk_id=kinopoisk_id)
-    return render(request, 'movies/player.html', {'movie': movie})
+    movies = Movie.objects.filter(kinopoisk_id=kinopoisk_id)
+    for movie in movies:
+        return render(request, 'movies/player.html', {'movie': movie})
 
 
 
