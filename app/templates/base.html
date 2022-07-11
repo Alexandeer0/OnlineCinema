@@ -19,19 +19,22 @@
    <div class="header">
      <div class="container">
          <a class="start" href="/">Голубой Огонёк</a>
-         <nav>
-            <form> 
-               <input type="text" name="text" class="search" placeholder="Search here!">
-               <input type="submit" name="submit" class="submit" value="Search">
+         <div class="nav">
+            <form action="/search/" method="POST">
+             {% csrf_token %}
+             <div>
+
+                 <!-- <label for="say">Поиск</label> -->
+                 <input id="moviename" type="text" name="moviename" value="{{ moviename }}">
+             </div>
+             <div>
+                 <input type="submit"  value="OK">
+             </div>
             </form>
-            
-            <ul>
-               <li class="menu-item"><a href="/">Фильмы</a></li>
-               <li class="menu-item"><a href="/">Сериалы</a></li>
-               <li class="menu-item"><a href="/">Аниме</a></li>
-               <li class="menu-item"><a href="/">Вход</a></li>
-            </ul>
-         </nav>
+            <a class="start1" href="/"><div class="mainly">Лушие фильмы</div></a>
+            <a class="start1" href="/"><div class="mainly">Самые популярные за неделю</div></a>
+            <a class="start1" href="/"><div class="mainly">Вход</div></a>
+         </div>
      </div>
    </div>
    <div class="main">

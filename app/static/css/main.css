@@ -50,6 +50,10 @@ body {
     font-size: 13px;
     transition: all .35s;
 }
+.mainly:hover{
+    font-size: 18px;
+    padding-top: 20px;
+}
 
 .start{
     text-decoration: none;
@@ -61,36 +65,19 @@ body {
 .start:hover {
     color: rgb(250,250,250);
 }
-.menu-item {
+.start1{
     text-decoration: none;
     color: white;
 }
 
-.mainly:hover{
-    font-size: 18px;
-    padding-top: 20px;
-}
-
 form {
-    width:400px;
-    margin:auto;
-    margin-top: 250px;
-    color: #19171c;
-    }
-    input{
-    padding:4px 10px;
-    border:0;
-    font-size:16px;
-    }
-    .search {
-    width: 75%;
-    }
-    .submit{
-    width: 70px;
-    background-color: #1c87c9;
-    color:#19171c;
-    }
-
+    color:aliceblue;
+    display: flex;
+    align-items: center;
+}
+form button {
+    color: #000;
+}
 .main {
 /*     padding-top: 40px; */
     display: block;
