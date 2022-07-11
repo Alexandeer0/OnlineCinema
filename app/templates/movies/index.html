@@ -3,13 +3,13 @@
 {% block main %}
 
 	<div class="movies">
-		
+
 		{% for movie in movies %}
 		
 		<div class="card-wrapper">
 			<a href="/movie/{{movie.kinopoisk_id}}">
 				<div class="one_movie">
-					<img src="media/{{movie.image}}" alt="Oops!">
+					<img src="/media/{{movie.image}}" alt="Oops!">
 					<div class="connected_movie">
 						<div class="movie-title-wrapper">
 							<div class="movie-title">{{movie}}</div>
@@ -22,42 +22,7 @@
 			</a>
 		</div>
 		{% endfor %}
-		{% for movie in movies %}
-		
-		<div class="card-wrapper">
-			<a href="/movie/{{movie.kinopoisk_id}}">
-				<div class="one_movie">
-					<img src="media/{{movie.image}}" alt="Oops!">
-					<div class="connected_movie">
-						<div class="movie-title-wrapper">
-							<div class="movie-title">{{movie}}</div>
-						</div>
-						<!-- <div class="description-wrapper">
-							<div class="mini-description">{{movie.description}}</div>
-						</div> -->
-					</div>
-				</div>
-			</a>
-		</div>
-		{% endfor %}
-		{% for movie in movies %}
-		
-		<div class="card-wrapper">
-			<a href="/movie/{{movie.kinopoisk_id}}">
-				<div class="one_movie">
-					<img src="media/{{movie.image}}" alt="Oops!">
-					<div class="connected_movie">
-						<div class="movie-title-wrapper">
-							<div class="movie-title">{{movie}}</div>
-						</div>
-						<!-- <div class="description-wrapper">
-							<div class="mini-description">{{movie.description}}</div>
-						</div> -->
-					</div>
-				</div>
-			</a>
-		</div>
-		{% endfor %}
+
 		
 
 	</div>
