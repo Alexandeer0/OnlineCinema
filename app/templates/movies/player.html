@@ -4,15 +4,19 @@
 {% block main %}
 
     <div class="player-content">
-        <h2 class="movie-name">Movie</h2>
+        <h2 class="movie-name"> {{ movie.name }} </h2>
         <div class="video-wrapper">
             <video controls poster="/app/static/images/filmklappe-t.jpg"></video>
         </div>
         <div class="description">
             <span>Описание</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quos, debitis, culpa reprehenderit doloribus recusandae accusantium nesciunt numquam molestiae labore placeat voluptatum! Impedit quo, laboriosam debitis temporibus iste, ipsa voluptatem saepe, at consectetur porro et molestias. Numquam ea laborum iure inventore. Nemo dolor accusamus necessitatibus dicta, sapiente aliquid. Reprehenderit, dolores. ipsum dolor sit amet consectetur adipisicing elit. Voluptas totam aspernatur fugit odit nisi corrupti? Cum maxime alias dolores consequuntur!</p>
+            <p> {{ movie.description }} </p>
         </div>
     </div>
+    <div id="magnet" style="display:none">{{ movie.link }}</div>
+    <script>
+        
+    </script>
     
 {% endblock %}
  
